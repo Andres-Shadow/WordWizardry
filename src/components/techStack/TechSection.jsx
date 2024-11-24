@@ -1,25 +1,23 @@
+// src/components/techStack/TechSection.jsx
 import React from "react";
-import TechCard from "./TechCard";
+import CategorySection from "./CategorySection";
 import { techData } from "../../constants/techData";
 
 const TechSection = () => {
   return (
     <section className="mb-16">
-      <h2 className="text-2xl font-bold text-green-600 mb-8 text-center">
-        Tecnologías Implementadas
-      </h2>
+      {/* Título con subrayado decorativo */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold text-green-600 mb-2">
+          Tecnologías Implementadas
+        </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-transparent via-green-300 to-transparent mx-auto" />
+      </div>
+
+      {/* Grid de categorías */}
       <div className="grid gap-8">
         {Object.entries(techData).map(([category, items]) => (
-          <div key={category} className="bg-gray-200 rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold text-gray-700 mb-4">
-              {category}
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {items.map((tech) => (
-                <TechCard key={tech.name} {...tech} />
-              ))}
-            </div>
-          </div>
+          <CategorySection key={category} category={category} items={items} />
         ))}
       </div>
     </section>
