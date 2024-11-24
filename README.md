@@ -14,6 +14,14 @@ All calculations are performed instantly as you type, ensuring a smooth and inte
 
 ---
 
+## 🚀 Try It Now
+
+Experience the magic of WordWizardry firsthand by visiting our live demo:
+
+[Try WordWizardry Now!](https://wordwizardry.netlify.app/)
+
+---
+
 ## 🛠️ Technologies Used
 
 This project leverages modern tools and best practices for front-end development:  
