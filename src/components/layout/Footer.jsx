@@ -3,7 +3,6 @@ import { Github, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    // Cambiamos el fondo a gris muy claro
     <footer className="bg-gray-50 shadow-lg rounded-lg mt-auto p-4">
       <div className="container mx-auto flex justify-between items-center">
         <p className="text-center flex-1 text-gray-600">

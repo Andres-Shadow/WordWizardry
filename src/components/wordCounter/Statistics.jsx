@@ -9,11 +9,11 @@ const Statistics = ({ stats }) => {
   return (
     <div className="flex flex-col gap-4 justify-center min-w-[200px]">
       <StatItem
-        label="Palabras sin espacios"
+        label="Total words without spaces"
         value={stats.wordsWithoutSpaces}
       />
-      <StatItem label="Palabras" value={stats.wordsWithSpaces} />
-      <StatItem label="Total caracteres" value={stats.totalCharacters} />
+      <StatItem label="Total words" value={stats.wordsWithSpaces} />
+      <StatItem label="Total characters" value={stats.totalCharacters} />
     </div>
   );
 };

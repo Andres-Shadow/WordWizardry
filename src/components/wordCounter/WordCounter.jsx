@@ -6,13 +6,13 @@ const WordCounter = () => {
   const [text, setText] = useState('');
 
   const calculateStats = useCallback((text) => {
-    // Palabras sin espacios (todo junto)
+    // Words without spaces 
     const wordsWithoutSpaces = text.trim().replace(/\s+/g, '').length;
     
-    // Palabras con espacios (conteo normal de palabras)
+    // Words with spaces (normal word count)
     const wordsWithSpaces = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
     
-    // Total de caracteres (incluyendo espacios y saltos de línea)
+    // Total characters count (including spaces and like breaks)
     const totalCharacters = text.length;
 
     return {

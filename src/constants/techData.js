@@ -3,30 +3,34 @@ import { Code2, Paintbrush, Wrench } from "lucide-react";
 
 export const techData = {
   "Frontend Core": [
-    { name: "React", description: "Biblioteca de UI", icon: Code2 },
-    { name: "JavaScript", description: "Lenguaje principal", icon: Code2 },
+    { name: "React", description: "UI Library", icon: Code2 },
+    {
+      name: "JavaScript",
+      description: "Main programming language",
+      icon: Code2,
+    },
   ],
-  Estilos: [
+  Styles: [
     {
       name: "TailwindCSS",
-      description: "Framework de CSS utilitario",
+      description: "Utility-first CSS framework",
       icon: Paintbrush,
     },
     {
       name: "Responsive Design",
-      description: "Diseño adaptativo",
+      description: "Adaptive design",
       icon: Paintbrush,
     },
   ],
-  Desarrollo: [
+  Development: [
     {
       name: "Best Practices",
-      description: "Código limpio y mantenible",
+      description: "Clean and maintainable code",
       icon: Wrench,
     },
     {
       name: "Component Pattern",
-      description: "Arquitectura modular",
+      description: "Modular architecture",
       icon: Wrench,
     },
   ],
