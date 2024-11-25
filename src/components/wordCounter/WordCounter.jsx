@@ -3,22 +3,28 @@ import TextArea from "./TextArea";
 import Statistics from "./Statistics";
 
 const WordCounter = () => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
 
   const calculateStats = useCallback((text) => {
-    // Words without spaces 
-    const wordsWithoutSpaces = text.trim().replace(/\s+/g, '').length;
-    
-    // Words with spaces (normal word count)
-    const wordsWithSpaces = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
-    
+    // Words without spaces
+    const wordsWithoutSpaces = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+
+    // amount of words in the text separated by spaces
+    const wordCount = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+
+    // amount of spaces in the text
+    const spaceCount = (text.match(/\s/g) || []).length;
+
+    // words with spaces
+    const wordsWithSpaces = wordCount + spaceCount;
+
     // Total characters count (including spaces and like breaks)
     const totalCharacters = text.length;
 
     return {
       wordsWithoutSpaces,
       wordsWithSpaces,
-      totalCharacters
+      totalCharacters,
     };
   }, []);
 
@@ -35,4 +41,3 @@ const WordCounter = () => {
 };
 
 export default WordCounter;
-
